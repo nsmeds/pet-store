@@ -18,8 +18,8 @@ const dev = 'https://pet-store-401.herokuapp.com/api';
 
 app.value('apiUrl', dev);
 
-app.factory('apiUrl', function(){
-    return dev;
-});
+// app.factory('apiUrl', function(){
+//     return dev;
+// });
 
 export default app;

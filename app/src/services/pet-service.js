@@ -18,7 +18,7 @@ export default function petService($http, apiUrl) {
         },
 
         add(pet){
-            return $http.post(`${apiUrl}/pets`, pet)
+            return $http.post(`${apiUrl}/stores`, pet)
                 .then(res => res.data);
         }
     };
