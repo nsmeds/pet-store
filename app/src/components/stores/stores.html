@@ -1,0 +1,13 @@
+<section ng-class="storeCtrl.styles.stores">
+    <h3>Stores:</h3>
+    <div ng-repeat="store in storeCtrl.stores">
+        <p
+            ui-sref="stores.pets({
+                store_id: store._id
+            })">{{store.name}} {{store.pets}}
+        </p>
+        <button ng-click="storeCtrl.remove(store)">Delete</button>
+    </div>
+</section>
+<store-add add="storeCtrl.add"></store-add>
+<ui-view></ui-view>

@@ -1,0 +1,17 @@
+<section>
+<div>
+    <label>View:</label>
+    <select
+        ng-class="petAppCtrl.styles['selector']"
+        ng-model="petAppCtrl.viewName"
+        ng-options="view for view in petAppCtrl.views"
+        ng-change="petAppCtrl.renderView()">
+    </select>
+</div>
+<div ng-repeat="pet in petAppCtrl.images">
+    <hr>
+    <pet-thumbnail pet="pet" ng-show="petAppCtrl.thumbnailView"></pet-thumbnail>
+    <button ng-click="app.remove(pet)"></button>
+</div>
+<new-pet add="petAppCtrl.add"></new-pet>
+</section>
