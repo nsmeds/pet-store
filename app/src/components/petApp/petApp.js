@@ -43,13 +43,6 @@ function controller(pets, stores) {
             });
     };
 
-    this.add = pet => {
-        pets.add(pet)
-            .then(savedPet => {
-                this.pets.push(savedPet);
-            });
-    };
-
     this.renderView = function() {
         this.thumbnailView = (this.viewName === 'thumbnail');
     };
