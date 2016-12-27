@@ -9,7 +9,9 @@ export default {
     controller
 };
 
-function controller() {
+controller.$inject = ['$state'];
+
+function controller($state) {
     this.styles = styles;
 
     this.reset = () => {
@@ -19,10 +21,19 @@ function controller() {
     this.reset();
 
     this.addStore = () => {
-        console.log('store added');
         this.add({
-            name: this.name
+            name: this.name,
+            address: {
+                street: this.street,
+                city: this.city,
+                state: this.state
+            }
         });
         this.reset();
+    };
+
+    this.cancel = () => {
+        this.reset();
+        $state.go('stores');
     };
 }

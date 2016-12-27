@@ -7,7 +7,7 @@ export default function petService($http, apiUrl) {
                 return $http.get(`${apiUrl}/stores/${storeId}/`)
                     .then(res => res.data);
             } else {
-                return $http.get('${apiUrl}/pets')
+                return $http.get(`${apiUrl}/pets`)
                     .then(res => res.data);
             }
         },

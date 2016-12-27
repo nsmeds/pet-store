@@ -4,16 +4,16 @@ import styles from './pet-add.scss';
 export default {
     template,
     bindings: {
-        add: '<'
+        add: '<',
+        storeId: '<'
     },
     controller
 };
 
-controller.$inject = ['storeService'];
+controller.$inject = ['storeService', 'petService'];
 
-function controller(stores) {
+function controller(stores, pets) {
     this.styles = styles;
-    this.storeName = '';
 
     stores.get()
         .then(returnedStores => {
@@ -31,7 +31,7 @@ function controller(stores) {
         this.add({
             name: this.name,
             animal: this.animal,
-            store: this.storeName._id
+            store: this.storeId
         });
         this.reset();
     };

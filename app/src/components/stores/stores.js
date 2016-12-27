@@ -24,7 +24,6 @@ function controller(stores) {
     };
 
     this.remove = store => {
-        console.log(store);
         stores.remove(store._id)
             .then(() => {
                 const index = this.stores.indexOf(store);

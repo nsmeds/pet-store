@@ -5,13 +5,12 @@ export default function storeService($http, apiUrl) {
         get(){
             return $http.get(`${apiUrl}/stores`)
                 .then(res => {
-                    // console.log('res.data', res.data);
                     return res.data;
                     }
                 );
         },
 
-        getPets(store_id){
+        getStore(store_id){
             return $http.get(`${apiUrl}/stores/${store_id}`)
                 .then(res => res.data);
         },

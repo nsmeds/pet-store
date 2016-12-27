@@ -1,9 +1,25 @@
 <section>
     <table>
+        <h3>Add A Store!</h3>
         <tr>
             <td><label>Name:</label></td>
             <td><input ng-model="$ctrl.name"></td>
         </tr>
+        <label>Address:
+            <tr>
+                <td><label>Street:</label></td>
+                <td><input ng-model="$ctrl.address.street"></td>
+            </tr>
+            <tr>
+                <td><label>City:</label></td>
+                <td><input ng-model="$ctrl.address.city"></td>
+            </tr>
+            <tr>
+                <td><label>State:</label></td>
+                <td><input ng-model="$ctrl.address.state"></td>
+            </tr>
+        </label>
     </table>
-    <button ng-click="$ctrl.addStore()">Add a Store</button>
+    <button ng-click="$ctrl.addStore()">Submit</button>
+    <button ng-click="$ctrl.cancel()">Cancel</button>
 </section>

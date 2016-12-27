@@ -8,10 +8,11 @@
         ng-change="petAppCtrl.renderView()">
     </select>
 </div>
-<div ng-repeat="pet in petAppCtrl.images">
+<div ng-repeat="pet in petAppCtrl.pets">
     <hr>
+    {{pet.name}} {{pet.animal}}
     <pet-thumbnail pet="pet" ng-show="petAppCtrl.thumbnailView"></pet-thumbnail>
-    <button ng-click="app.remove(pet)"></button>
+    <button ng-click="petAppCtrl.remove(pet)"></button>
 </div>
-<pet-add add="petAppCtrl.add"></pet-add>
+<pet-add store-id="petAppCtrl.storeId" add="petAppCtrl.add"></pet-add>
 </section>

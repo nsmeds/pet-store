@@ -14,12 +14,6 @@ export default function routes($stateProvider, $urlRouterProvider) {
         component: 'stores'
     });
 
-    // $stateProvider.state({
-    //     name: 'petApp',
-    //     url: '/pets',
-    //     component: 'petApp'
-    // });
-
     $stateProvider.state({
         name: 'stores.pets',
         url: '/:store_id',
