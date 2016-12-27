@@ -1,0 +1,17 @@
+<section>
+    <table>
+        <tr>
+            <td><label>Name:</label></td>
+            <td><input ng-model="$ctrl.name"></td>
+        </tr>
+        <tr>
+            <td><label>Animal (Cat, Lizard, Bird, Dog or Fish):</label></td>
+            <td><input ng-model="$ctrl.animal"></td>
+        </tr>
+        <tr>
+            <td><label>Store:</label></td>
+            <td><select ng-model="$ctrl.storeName" ng-options="store.name for store in $ctrl.myStores"></select></td>
+        </tr>
+    </table>
+    <button ng-click="$ctrl.addPet()">Add a Pet</button>
+</section>
