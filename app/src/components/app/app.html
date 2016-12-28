@@ -1,6 +1,7 @@
 <header>
     <h1>Pet Store</h1>
     <a ui-sref="stores">Stores</a>
+    <a ng-if="$ctrl.isAuthenticated()" ui-sref="home" ng-click="$ctrl.logout()">Logout</a>
 </header>
 <main>
     <ui-view>Hi it's the ui-view</ui-view>

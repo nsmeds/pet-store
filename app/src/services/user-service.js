@@ -25,13 +25,13 @@ export default function userService(token, $http, apiUrl){
 
   return {
     //do we have a token?
-    isAuthenticated(){
+    isAuthenticated() {
       //instead of return token, return a boolean
       return !!token.get();
     },
 
     //remove the token
-    logout(){
+    logout() {
       token.remove();
     },
 

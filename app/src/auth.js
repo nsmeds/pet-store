@@ -8,7 +8,7 @@ export default function auth($rootScope, userService, ngDialog, $state){
     //console.log('$scs', toState, toParams, fromState, fromParams);
 
     //check if users already logged in
-    if(!(toState.data && toState.data.public) && !userService.isAuthenticated()) {
+    if(toState.name !== 'home' && !userService.isAuthenticated()) {
       //stop ui-router from making the state change
       event.preventDefault();
 

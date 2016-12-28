@@ -11,8 +11,8 @@ import defaultRoute from 'angular-ui-router-default';
 import 'angular-ui-router/release/stateEvents';
 
 import dialog from 'ng-dialog';
-// import 'ng-dialog/css/ngDialog.css';
-// import 'ng-dialog/css/ngDialog-theme-default.css';
+import 'ng-dialog/css/ngDialog.css';
+import 'ng-dialog/css/ngDialog-theme-default.css';
 
 //route, http config and auth setup
 import http from './http';

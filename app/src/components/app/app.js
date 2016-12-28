@@ -5,8 +5,17 @@ export default {
     controller
 };
 
-controller.$inject = ['$state'];
+controller.$inject = ['$state', 'userService'];
 
-function controller($state) {
-    this.gotoPets = () => $state.go('petApp');
+function controller($state, userService) {
+    // this.gotoPets = () => $state.go('petApp');
+
+    this.logout = () => {
+        console.log('logout button called');
+        userService.logout();
+    };
+
+    this.isAuthenticated = () => {
+        return userService.isAuthenticated();
+    };
 }
