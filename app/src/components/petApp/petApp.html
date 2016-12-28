@@ -10,9 +10,9 @@
 </div>
 <div ng-repeat="pet in petAppCtrl.pets">
     <hr>
-    {{pet.name}} {{pet.animal}}
+    {{pet.name}} the {{pet.animal}}
     <pet-thumbnail pet="pet" ng-show="petAppCtrl.thumbnailView"></pet-thumbnail>
-    <button ng-click="petAppCtrl.remove(pet)"></button>
+    <button ng-click="petAppCtrl.remove(pet)">Delete</button>
 </div>
 <pet-add store-id="petAppCtrl.storeId" add="petAppCtrl.add"></pet-add>
 </section>
