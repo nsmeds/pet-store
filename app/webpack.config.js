@@ -41,6 +41,6 @@ module.exports = {
         }]
     },
     sassLoader: {
-        includePaths: ['src/scss/partials']
+        includePaths: ['./src/scss/partials']
     }
 };
