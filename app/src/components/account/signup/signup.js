@@ -1,5 +1,5 @@
 import template from './signup.html';
-import './signup.scss';
+import styles from './signup.scss';
 
 export default {
     template,
@@ -10,6 +10,9 @@ export default {
 controller.$inject = [ 'userService' ];
 
 function controller(userService) {
+
+    this.styles = styles;
+    
     this.credentials = {
         email: '',
         username: '',

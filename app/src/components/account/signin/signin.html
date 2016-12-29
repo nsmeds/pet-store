@@ -1,4 +1,4 @@
-<section>
+<section ng-class="$ctrl.styles.section">
     <h2>Sign in</h2>
     <form name="auth" ng-submit="$ctrl.authenticate()">
         <div>
@@ -13,7 +13,7 @@
             </label>
         </div>
 
-        <button type="submit">Sign In</button>
+        <button class="modal-button" type="submit">Sign In</button>
     </form>
     <div class="error" ng-if="$ctrl.error">{{$ctrl.error.reason}}</div>
 </section>

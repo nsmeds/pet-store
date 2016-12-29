@@ -13,6 +13,8 @@ export default {
 controller.$inject = ['petService', 'storeService'];
 
 function controller(pets, stores) {
+    this.styles = styles;
+
     this.$onInit = () => {
         this.styles = styles;
         this.views = ['thumbnail'];

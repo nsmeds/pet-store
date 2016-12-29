@@ -1,3 +1,10 @@
-.error {
-    color: red;
+:local(.section) {
+    
+        .modal-button {
+            max-width: 100px;
+        }
+
+        .error {
+        color: red;
+    }
 }

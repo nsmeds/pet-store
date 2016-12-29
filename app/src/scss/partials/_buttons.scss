@@ -1,6 +1,21 @@
 @import 'colors';
 
-button.primary {
+button {
+    background: white;
+    color: inherit;
+    max-width: 50px;
+    border-radius: 3px;
+    border: 2px solid $button-secondary;
+    margin-bottom: 0.2em;
+}
+
+button:active {
     background: $button-primary;
     color: white;
+    border-color: #ccc;
+    transition-duration: 0.1s;
+}
+
+button:hover {
+        cursor: pointer;
 }

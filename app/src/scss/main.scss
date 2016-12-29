@@ -1,5 +1,23 @@
 @import 'buttons';
+@import 'colors';
+@import 'corners';
+@import 'layout';
 
 h1 {
+    color: $display-color;
+}
+
+body {
+    color: $text-color;
+    font-family: 'Andale Mono', 'Monaco', monospace;
+}
+
+a {
+    color: $maroon;
+    text-decoration: none;
+}
+
+a:hover {
     color: steelblue;
+    transition-duration: 0.1s;
 }
