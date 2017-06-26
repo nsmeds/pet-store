@@ -3,4 +3,5 @@ node_modules
 .env
 test/.env.test
 .vscode
+npm-debug.log
 build
