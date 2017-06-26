@@ -1,0 +1,35 @@
+@import 'colors';
+
+:local(.stores) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 98vw;
+
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .store-div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0.1em;
+    }
+
+    .store-div:nth-child(odd) {
+        color: $display-color;
+        button {
+            border-color: $display-color;
+        }
+    }
+
+    .store-div:hover {
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 825px) {
+        justify-content: space-between;
+    }
+}
+

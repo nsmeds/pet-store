@@ -1,4 +1,4 @@
-<section>
+<section ng-class="$ctrl.styles.section">
     <table>
         <h3>Add A Pet!</h3>
         <tr>
@@ -6,10 +6,12 @@
             <td><input ng-model="$ctrl.name"></td>
         </tr>
         <tr>
-            <td><label>Animal (Cat, Lizard, Bird, Dog or Fish):</label></td>
-            <td><input ng-model="$ctrl.animal"></td>
+            <td><label>Animal:</label></td>
+            <td><input ng-model="$ctrl.animal" placeholder="cat, lizard, bird, dog, fish"></td>
         </tr>
     </table>
-    <button ng-click="$ctrl.addPet()">Submit</button>
-    <button ng-click="$ctrl.reset()">Cancel</button>
+    <div id="button-div">
+        <button ng-click="$ctrl.addPet()">Submit</button>
+        <button ng-click="$ctrl.reset()">Cancel</button>
+    </div>
 </section>

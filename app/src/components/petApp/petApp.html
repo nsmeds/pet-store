@@ -1,18 +1,9 @@
-<section>
-<div>
-    <label>View:</label>
-    <select
-        ng-class="petAppCtrl.styles['selector']"
-        ng-model="petAppCtrl.viewName"
-        ng-options="view for view in petAppCtrl.views"
-        ng-change="petAppCtrl.renderView()">
-    </select>
-</div>
-<div ng-repeat="pet in petAppCtrl.pets">
-    <hr>
-    {{pet.name}} the {{pet.animal}}
-    <pet-thumbnail pet="pet" ng-show="petAppCtrl.thumbnailView"></pet-thumbnail>
-    <button ng-click="petAppCtrl.remove(pet)">Delete</button>
-</div>
-<pet-add store-id="petAppCtrl.storeId" add="petAppCtrl.add"></pet-add>
+<section ng-class="petAppCtrl.styles.pets">
+    <h3>Pets:</h3>
+    <span class="text" ng-if="petAppCtrl.pets.length === 0">No pets in this store.</span>
+    <div class="pet-div" ng-repeat="pet in petAppCtrl.pets track by $index">
+        <span>{{pet.name}} the {{pet.animal}}</span>
+        <button ng-click="petAppCtrl.remove(pet)">Delete</button>
+    </div>
+    <pet-add store-id="petAppCtrl.storeId" add="petAppCtrl.add"></pet-add>
 </section>

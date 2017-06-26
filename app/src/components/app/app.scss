@@ -1,0 +1,16 @@
+@import 'colors';
+
+:local(.main) {
+    display: flex;
+}
+
+:local(.header) {
+    text-align: center;
+    padding-bottom: 1em;
+    border-bottom: 1px solid $maroon;
+
+    a {
+        margin-left: 2em;
+        margin-right: 2em;
+    }
+}

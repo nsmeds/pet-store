@@ -29,7 +29,13 @@ module.exports = {
                 cacheDirectory: true,
                 // presets: ['es2015']
             }
-        },     {
+        }, {
+            test: /\.css$/,
+            loader: cssExtract.extract(
+                'style-loader',
+                'css-loader'
+            )	
+        }, {
             test: /\.scss$/,
             loader: cssExtract.extract(
                 'style-loader',
@@ -41,6 +47,6 @@ module.exports = {
         }]
     },
     sassLoader: {
-        includePaths: ['src/scss/partials']
+        includePaths: ['./src/scss/partials']
     }
 };

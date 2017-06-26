@@ -1,0 +1,23 @@
+:local(.section) {
+    #button-div {
+        display: flex;
+        justify-content: flex-start;
+
+        button {
+            margin: 0.5em 0.5em 0 0;
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        font-size: 0.9em;
+    }
+    ::-moz-placeholder { /* Firefox 19+ */
+        font-size: 0.9em;
+    }
+    :-ms-input-placeholder { /* IE 10+ */
+        font-size: 0.9em;
+    }
+    :-moz-placeholder { /* Firefox 18- */
+        font-size: 0.9em;
+    }
+}

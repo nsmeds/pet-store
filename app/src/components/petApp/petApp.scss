@@ -1,0 +1,25 @@
+@import 'colors';
+
+:local(.pets) {
+    .pet-div {
+        display: flex;
+        justify-content: space-between;  
+        margin-bottom: 0.1em;
+
+        button {
+            margin-left: 1em;
+        }
+    }
+
+    .pet-div:nth-child(even) {
+        color: $display-color;
+
+        button {
+            border-color: $display-color;
+        }
+    }
+
+    .text {
+        font-size: 0.9em;
+    }
+}
